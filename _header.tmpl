@@ -1,21 +1,39 @@
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSKQ78X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <header>
-    <div class="container appbar-shadow">
-      <div class="appbar">
-        <a href="/" class="logo"><i class="powericon-electric-plug"></i></a>
-        <a href="/" class="title">
-          <div class="caption"><TMPL_IF NAME="SITE_NAME"><TMPL_VAR NAME="SITE_NAME"><TMPL_ELSE><TMPL_VAR NAME="HTTP_HOST"></TMPL_IF></div>
-          <div class="subcaption">Интернет-магазин</div>
-        </a>
-        <div class="phone">+7 (<TMPL_VAR NAME="PHONE_CODE">) <TMPL_VAR NAME="PHONE_NUM"></div>
+   	
+	<div class="container appbar-shadow">
+     
+	  <div class="appbar">
+	  
+   <a href="/" class="logotype1">                        
+    <div><b>POWERSTAB.RU</b>     Интернет&#8209;магазин</div>
+    <span>решение проблем с электроснабжением</span>
+</a> 
+   <a href="/" class="title"></a>
+<!--	   <a href="/" class="logo"><i class="powericon-electric-plug"></i></a>
+ 
+ <a href="/" class="title">
+          <!-- <div class="caption"><TMPL_IF NAME="SITE_NAME"><TMPL_VAR NAME="SITE_NAME"><TMPL_ELSE><TMPL_VAR NAME="HTTP_HOST"></TMPL_IF></div>
+          <div class="subcaption">Решение проблем с электроснабжением</div>
+        </a> -->
+         <div class="caption"></div>
+         <div class="subcaption">Доставка со склада в Москве, <br>Санкт-Петербурге, Ростове-на-Дону<br>Нижнем Новгороде<br>2000 ПВЗ по России</div>
+		
+        <div class="phone">Звоните: <a href='tel:<TMPL_VAR NAME="PHONE_FULL">' onclick="ym(89228187,'reachGoal','TelHeader')">+7 (<TMPL_VAR NAME="PHONE_CODE">) <TMPL_VAR NAME="PHONE_NUM"></a>Пишите:<a href='email:sales@powerstab.ru'>sales@powerstab.ru</div></a>
         <div class="schedule">
           <div class="dow"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
           <div class="workday">07:00 - 23:30</div>
           <div class="weekend">09:00 - 23:30</div>
         </div>
-        <!--
+		<!--
         <a href="#" class="icon"><i class="powericon-balance"></i></a>
         <a href="#" class="icon"><i class="powericon-bookmark"></i></a>
-        -->
+	    -->
         <a href="cart.php" class="icon counter"><i class="powericon-cart"></i><sup><TMPL_VAR NAME="CART_COUNT"></sup></a>
       </div>
     </div>
