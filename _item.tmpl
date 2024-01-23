@@ -4,10 +4,42 @@
   data-brand="<TMPL_VAR NAME='trademark' escape='html'>"
   data-category="<TMPL_VAR NAME='category' escape='html'>"
   data-price="<TMPL_IF NAME='price'><TMPL_VAR NAME='price'><TMPL_ELSE>0</TMPL_IF>">
+
+  <TMPL_IF NAME="price" OP=">=" VALUE="10000">
+       <div class="label-blue">бесплатная доставка</div>
+                        </TMPL_IF>
+						
+	<TMPL_IF NAME="bestseller">
+	
+     <div class="label-red">хит продаж</div>
+	 </TMPL_IF> 
+<!--	
+	<TMPL_IF NAME="bestseller">
+     <div class="label red">хит продаж</div>
+                        </TMPL_IF> -->
   <div class="img">
     <img src="products/img/<TMPL_VAR NAME='image_big'>" alt="<TMPL_VAR NAME="trademark"> <TMPL_VAR NAME='model'>" title="<TMPL_VAR NAME="trademark"> <TMPL_VAR NAME='model'>"/>
   </div>
   <div class="price"><TMPL_VAR NAME="fprice">&nbsp;&#8381;</div>
+  
+ <div class="buttons"> 
+ <object> <a rel="nofollow" href="/buy.php?product=<TMPL_VAR NAME='code'>" onclick="ym(89228187,'reachGoal','CartCategory'); return true;" class ="cart btn">В корзину</a>  </object>
+ </div>
+    
   <div class="category"><TMPL_VAR NAME="category"></div>
   <div class="model"><TMPL_VAR NAME="trademark"> <TMPL_VAR NAME='model'></div>
+  
+  <!--<div class="buy">
+                                <TMPL_IF NAME="available">
+                                    <a href="buy.php?product=<TMPL_VAR NAME='code'>">в корзину</a>
+                                </TMPL_ELSE>
+                                    <a  class="notavalible">Нет в наличии</a>
+                                </TMPL_IF>
+                            </div> -->
+    <div class="description"><p><TMPL_VAR NAME='description'></p>
+	<center><table><TMPL_LOOP NAME='characteristics'>
+                <tr><th><TMPL_VAR NAME='name'></th><td><TMPL_VAR NAME='value'></td></tr>
+				              </TMPL_LOOP></table></center></div>
+ <!-- <div class="description"><p><br><TMPL_VAR NAME='description'></p></div> -->
+
 </a>
