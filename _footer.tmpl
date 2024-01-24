@@ -12,7 +12,7 @@
         <i class="icon powericon-phone"></i>
         <div class="">
           Телефон
-          <a href="tel:<TMPL_VAR NAME='PHONE'>">8&nbsp;<TMPL_VAR NAME='PHONE_CODE'>&nbsp;<TMPL_VAR NAME='PHONE_NUM'></a>
+          <a href="tel:<TMPL_VAR NAME='PHONE_FULL'>" onclick="ym(89228187,'reachGoal','TelHeader')">+7 (<TMPL_VAR NAME="PHONE_CODE">) <TMPL_VAR NAME="PHONE_NUM"></a>
         </div>
       </div>
       <TMPL_IF NAME="CITY">
@@ -38,4 +38,41 @@
       <script type="text/javascript">new Image().src = "https://mc.yandex.ru/pixel/6672449664279570808?rnd="+Math.random();</script>
     </div>
   </div>
+  <!-- Yandex.Metrika counter -->
+ 
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(89228187, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true,
+        ecommerce:"dataLayer"
+   });
+  </script>
+<noscript><div><img src="https://mc.yandex.ru/watch/89228187" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+<!-- /Yandex.Metrika counter -->
+<!-- yclid -->
+
+<script type="text/javascript">
+function setCookie(name, value, days){
+    var date = new Date();
+    date.setTime(date.getTime() + (days*24*60*60*1000)); 
+    var expires = "; expires=" + date.toGMTString();
+    document.cookie = name + "=" + value + expires + ";path=/";
+}
+function getParam(p){
+    var match = RegExp('[?&]' + p + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+var yclid = getParam('yclid');
+if(yclid){
+    setCookie('yclid', yclid, 90);
+}
+</script>
+<!-- /yclid -->
 </footer>
